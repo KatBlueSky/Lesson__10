@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Lesson 10 Методлологія</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">HEADER</header>
+		<main class="page">
+			<!-- БЭМ Блок who-we-are -->
+			<div class="who-we-are">
+				<!-- Обмежуючий контейнер.Тут БЭМ елемент -->
+				<div class="who-we-are__container">
+					<!-- Картинка БЭМ-элемент блока who-we-are-->
+					<div class="who-we-are__image">
+						<!-- Конвертую в webp -->
+						<picture>
+							<source srcset="img/image.webp">
+							<img src="img/image.png" alt="who-we-are-image">
+						</picture>
+					</div>
+					<!-- Тут БЕМ-елемент блоку who-we-are-->
+					<div class="who-we-are__content">
+						<!-- В елементи можно вкладати інші блоки, а в блоки елементи-->
+						<!-- Це окремий БЕМ-блок who-we-are Заголовок-->
+						<div class="block-header">
+							<!-- !!!Відступи для блока задавать НЕМОЖНА, а з модифікатором чи міксом МОЖНА-->
+							<!-- !!!!Варіант 1 Для відступу роблю модифікатор-->
+							<!-- <div class="header-block header-block-margin"> -->
+							<!--!!!! Варіант 2 БЭМ-мікс. Тут мікс:цей обьект є одночасно і блокомом .header-block  і єлементом who-we-are__block-header -->
+							<div class="who-we-are__block-header header-block">
+								<!-- !!Тут використовую сікс для звільнення імені, я перевертаю слова місцями, щоб створити окремий новий незалежний блок -->
+								<!-- БЭМ-елемент блоку header-block -->
+								<h2 class="header-block__subtitle">Who we are</h2>
+								<!-- БЭМ-елемент  блока header-block -->
+								<h1 class="header-block__title">Why Createx?</h1>
+							</div>
+						</div>
+
+						<!-- Тут список окремий БЕМ-блок  -->
+						<ul class="list">
+							<!-- Добавляем класс для li елемент БЭМ list__item для блока list-->
+							<li class="list__item">A fermentum in morbi pretium aliquam adipiscing
+								donec tempus.</li>
+							<li class="list__item">Vulputate placerat amet pulvinar lorem nisl.</li>
+							<li class="list__item">Consequat feugiat habitant gravida quisque elit
+								bibendum id adipiscing
+								sed.
+							</li>
+							<li class="list__item">Etiam duis lobortis in fames ultrices commodo nibh.
+							</li>
+							<li class="list__item">Tincidunt sagittis neque sem ac eget.</li>
+							<li class="list__item">Ultricies amet justo et eget quisque purus vulputate
+								dapibus tortor.</li>
+						</ul>
+
+						<!--Окремий блок БЕМ кнопка -->
+						<div class="button">
+							<!-- Ссилка БЕМ-елемент блоку button -->
+							<a href="#" class="button__link">More about us</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--Тут окремий незалежний БЕМ-блок featured-courses-->
+			<div class="featured-courses">
+				<!-- Обмежуючий контейнер -->
+				<!-- Тут БЕМ-елемент -->
+				<div class="featured-courses__container">
+
+					<div class="featured-courses__header header-courses">
+						<!-- Тут БЕМ-елемент -->
+						<h2 class="header-courses__subtitle">Ready to learn?</h2>
+						<!-- Тут БЕМ-елемент -->
+						<h1 class="header-courses__title">Featured Courses</h1>
+					</div>
+					<!-- Кнопка -->
+					<!-- БЕМ блок -->
+					<div class="button-featured">
+						<!-- Тут БЕМ-елемент -->
+						<a href="#" class="button-featured__link">View all course</a>
+					</div>
+
+					<!-- Мікс -->
+					<div class="featured-courses__rows rows-courses">
+						<!-- БЕМ-елемент -->
+						<div class="rows-courses__row">
+							<!-- БЕМ-елемент -->
+							<div class="rows-courses__column">
+								<picture>
+									<source srcset="img/image-1.webp">
+									<img src="img/image-1.png" alt="photo-1">
+								</picture>
+
+								<!-- мікс-->
+								<div class="rows-courses__body courses-featured">
+									<p class="courses-featured__subtitle">Marketing</p>
+									<h3 class="courses-featured__title">The Ultimate Google Ads Training
+										Course </h3>
+									<p class="courses-featured__number">$100 </p>
+									<p class="courses-featured__text">by Jerome Bell</p>
+								</div>
+							</div>
+						</div>
+
+						<!-- БЕМ-елемент блоку featured-courses-->
+						<div class="rows-courses__row">
+							<!-- БЕМ-елемент блока featured-courses-->
+							<div class="rows-courses__column">
+								<picture>
+									<source srcset="img/image-2.webp">
+									<img src="img/image-2.png" alt="photo-2">
+								</picture>
+
+								<!-- мікс-->
+								<div class="rows-courses__body courses-featured">
+									<p class="courses-featured__subtitle">HR & Recruting</p>
+									<h3 class="courses-featured__title">HR Management and Analytics</h3>
+									<p class="courses-featured__number">$200</p>
+									<p class="courses-featured__text">by Leslie Alexander Li</p>
+								</div>
+							</div>
+						</div>
+
+						<!-- БЕМ-елемент блоку featured-courses-->
+						<div class="rows-courses__row">
+							<div class="rows-courses__column">
+								<picture>
+									<source srcset="img/image-3.webp">
+									<img src="img/image-3.png" alt="photo-3">
+								</picture>
+								<!-- мікс-->
+								<div class="rows-courses__body courses-featured">
+									<p class="courses-featured__subtitle">Management</p>
+									<h3 class="courses-featured__title">Business Development
+										Management</h3>
+									<p class="courses-featured__number">$400</p>
+									<p class="courses-featured__text">by Dianne Russell</p>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="rows-courses__row">
+							<!--  БЕМ-елемент-->
+							<div class="rows-courses__column">
+								<!-- Картинка -->
+								<picture>
+									<source srcset="img/image-4.webp">
+									<img src="img/image-4.png" alt="photo-4">
+								</picture>
+								<!-- мікс-->
+								<div class="rows-courses__body courses-featured">
+									<p class="courses-featured__subtitle">Management</p>
+									<!--  БЕМ-елемент-->
+									<h3 class="courses-featured__title">Prduct Management Fundamentals
+									</h3>
+									<!--  БЕМ-елемент-->
+									<p class="courses-featured__number">$480</p>
+									<!--  БЕМ-елемент-->
+									<p class="courses-featured__text">by Marvin McKinney</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="rows-courses__row">
+							<!--  БЕМ-елемент-->
+							<div class="rows-courses__column">
+								<!-- Картинка -->
+								<picture>
+									<source srcset="img/image-5.webp">
+									<img src="img/image-5.png" alt="photo-5">
+								</picture>
+								<!-- мікс-->
+								<div class="rows-courses__body courses-featured">
+									<p class="courses-featured__subtitle">Marketing</p>
+									<!-- БЭМ Элемент -->
+									<h3 class="courses-featured__title">Brand Management & PR
+										Communications</h3>
+									<p class="courses-featured__number">$530</p>
+									<!-- БЭМ Элемент -->
+									<p class="courses-featured__text">by Kristin Watson</p>
+								</div>
+							</div>
+						</div>
+
+						<!-- БЕМ-елемент блоку featured-courses-->
+						<div class="rows-courses__row">
+							<div class="rows-courses__column">
+								<picture>
+									<source srcset="img/image-6.webp">
+									<img src="img/image-6.png" alt="photo-6">
+								</picture>
+								<div class="rows-courses__body courses-featured">
+									<p class="courses-featured__subtitle">Design</p>
+									<h3 class="courses-featured__title">Graphic Design Basic</h3>
+									<p class="courses-featured__number">$500</p>
+									<p class="courses-featured__text">by Guy Hawkins</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<!-- Блок how-we-do-it" -->
+			<div class="how-we-do-it">
+				<div class="how-we-do-it__container">
+					<div class="how-we-do-it__header header-do-it">
+						<!-- це БЕМ-елемент -->
+						<h2 class="header-do-it__subtitle">Our benefits</h2>
+						<!-- це БЕМ-елемент-->
+						<h1 class="header-do-it__title">That’s how we do it</h1>
+					</div>
+
+					<!-- це БЕМ-елемент блоку how-we-do-it-->
+					<div class="how-we-do-it__header-buttoms">
+						<!--  це БЕМ-блок -->
+						<div class="button-do-it">
+							<img src="img/like.svg" alt="like">
+							<!-- !! Тут модифікатор БЕМ-елементу button-do-it__link блока header-buttom-->
+							<a href="#" class="button-do-it__link-red">Experienced Tutors</a>
+						</div>
+
+						<!-- Кнопка -->
+						<!-- це БЕМ-блок-->
+						<div class="button-do-it">
+							<img src="img/Layouts.svg" alt="layouts">
+							<!-- БЕМ-елемент блока how-we-do-it-button-->
+							<a href="#" class="button-do-it__link">Feedback & Support</a>
+						</div>
+
+						<!-- Кнопка -->
+						<!-- це БЕМ-блок-->
+						<div class="button-do-it">
+							<img src="img/Chat.svg" alt="chat">
+							<!-- БЕМ-елемент блока button-do-it-->
+							<a href="#" class="button-do-it__link">24/7 Online Library</a>
+						</div>
+
+						<!-- Кнопка -->
+						<!-- це БЕМ-блок-->
+						<div class="button-do-it">
+							<img src="img/Star.svg" alt="like">
+							<a href="#" class="button-do-it__link">Community</a>
+						</div>
+					</div>
+					<div class="how-we-do-it__content">
+						<!-- БЕМ-елемент блоку how-we-do-it  -->
+						<h3 class="how-we-do-it__title">Only practicing tutors</h3>
+						<!-- БЕМ-елемент блоку how-we-do-it -->
+						<div class="how-we-do-it__text">
+							<p class="text">Urna nisi, arcu cras nunc. Aenean quam est lobortis mi non fames
+								dictum
+								suspendisse. Morbi mauris cras massa ut dolor quis sociis mollis augue.
+								Nunc, sodales
+								tortor
+								sit
+								diam mi amet massa. Fermentum diam diam sociis vestibulum. Nulla nisl
+								accumsan, id
+								dignissim
+								massa
+								ut amet. Amet enim, nisi tempus vehicula.</p>
+						</div>
+						<!-- БЕМ-елемент блоку how-we-do-it-->
+						<div class="how-we-do-it__image">
+							<img src="img/illustration1-1.svg" alt="we-do-it-image">
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="article">
+				<div class="article__container">
+					<div class="article__header">
+						<h1 class="article__title">HR statistics: job search,interviews, hiring and recruiting</h1>
+					</div>
+					<div class="article block-article">
+						<div class="image-article">
+							<img src="img/image.png" alt="foto" class="image">
+						</div>
+						<div class="block-article__content">
+							<div class="block-article__bold text">
+								<p class="text__bold">Vulputate vitae pellentesque scelerisque luctus consequat mattis
+									pellentesque
+									dui
+									odio. Interdum aenean sit malesuada ornare sed gravida rhoncus, congue. Purus auctor nullam
+									diam
+									quis
+									est hendrerit ac euismod.</p>
+							</div>
+
+							<div class="block-article__small text">
+								<p class="text__small">At facilisi sapien posuere eget nunc senectus proin nullam. Tortor
+									senectus in
+									et
+									sagittis,
+									vitae diam cras dignissim. Varius adipiscing eget diam nisi. Orci, consectetur vulputate
+									metus
+									ornare
+									pharetra, neque, fermentum. Vel nec rhoncus, non nunc, neque in massa. Feugiat leo nam nisl
+									lacinia
+									amet, odio. Mi varius viverra risus vel. </p>
+								<p class="text__small">Amet, morbi sed pharetra, elit eget mi potenti. Condimentum orci interdum
+									feugiat
+									lectus
+									libero duis. Nisl massa, elementum varius sit. Nunc felis, porttitor aliquam urna, accumsan
+									et sed.
+									Aliquet non sed duis diam vehicula rhoncus. In dictum nullam tincidunt semper pellentesque
+									purus
+									morbi
+									sed. Ut aliquet velit pharetra, nisi nunc, non.</p>
+							</div>
+
+
+							<div class="block-article__bold text">
+								<p class="text__bold-comment">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo,
+									amet
+									lectus
+									quam
+									viverra mus lobortis fermentum amet, eu. Pulvinar eu sed purus facilisi. Vitae id turpis
+									tempus
+									ornare
+									turpis quis non. Congue tortor in tot euismod vulputate etiam eros. Vel accumsan at elit
+									neque,
+									ipsum.
+								</p>
+							</div>
+
+							<div class="block-article__small text">
+								<p class="text__small">Mauris amet arcu nisl vel dictum tellus. Sed rhoncus, ut sed id ut erat
+									mattis.
+									Vitae
+									mus
+									blandit in neque amet non fringilla blandit:</p>
+								<ul class="list">
+									<li class="list-item">A fermentum in morbi pretium aliquam adipiscing donec tempus.</li>
+									<li class="list-item">Vulputate placerat amet pulvinar lorem nisl.</li>
+									<li class="list-item">Consequat lorem feugiat habitant gravida quisque elit bibendum id
+										adipiscing
+										sed.
+									</li>
+									<li class="list-item">Etiam duis lobortis in fames ultrices commodo nibh.</li>
+								</ul>
+							</div>
+
+							<div class="block-article__small text">
+								<p class="text__small">Enim, vel massa odio diam. Blandit massa gravida feugiat elementum id
+									nec sed
+									leo. Nisi
+									in
+									ornare lectus eget. Urna, risus, consectetur volutpat lorem purus. Velit aliquet nibh vitae
+									maecenas.
+									Consectetur neque ut aliquam eros, purus enim dignissim aenean vitae. Ultrices fames augue
+									mattis
+									tortor
+									est justo, pharetra nibh risus. Facilisi at porttitor volutpat natoque proin amet, nulla.
+									Vivamus
+									ut
+									lobortis sagittis curabitur tellus convallis eget netus vitae.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</main>
+		<footer class="footer">А тут підвал
+		</footer>
+	</div>
+</body>
+
+</html>
